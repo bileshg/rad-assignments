@@ -5,13 +5,14 @@
  */
 package com.mycompany.demo.assignment001.question004;
 
+import com.mycompany.demo.assignment001.question004.behaviours.SomeTask;
 import com.mycompany.demo.assignment001.question004.executor.CustomThreadPool;
 
 /**
  *
  * @author bilesh
  */
-public class TestEverything {
+public class TestExecutor {
 
     public static void main(String[] args) throws InterruptedException {
         CustomThreadPool<Runnable> threadPool = new CustomThreadPool<>(3, 4);

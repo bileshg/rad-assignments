@@ -27,9 +27,9 @@ public class CustomTaskExecutor<T extends Runnable> implements Runnable {
                 String name = Thread.currentThread().getName();
                 Runnable task = queue.take();
                 if (task != null) {
-                    System.out.println(name + " started execution");
+                    System.out.println(name + ": Performing task");
                     task.run();
-                    System.out.println(name + " finished execution");
+                    System.out.println(name + ": Finished task");
                 }
             }
         } catch (InterruptedException e) {
