@@ -29,14 +29,14 @@ public class CounterTest {
     }
     
     /**
-     * Counting odd numbers.
+     * Counting prime numbers.
      */
     @Test
     public void testCountingPrimeNumbers() {
         System.out.println("testCountingPrimeNumbers");
-        List<Integer> ci = Arrays.asList(1, 2, 3, 4, 5, 6);
-        long expected = 3l;
-        long actual = Counter.countIf(ci, Behaviours::checkOddNumber);
+        List<Integer> ci = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+        long expected = 4l;
+        long actual = Counter.countIf(ci, Behaviours::checkPrimeNumber);
         Assert.assertEquals(expected, actual);
     }    
     

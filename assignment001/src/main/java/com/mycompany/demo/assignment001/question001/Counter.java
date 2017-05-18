@@ -14,7 +14,9 @@ import java.util.function.Predicate;
  */
 public class Counter {
 
-    public static <T> long countIf(Collection<T> c, Predicate<T> p) {
-        return c.stream().filter(p).count();
+    public static <T> long countIf(Collection<T> collection, Predicate<T> predicate) {
+        return collection.stream()
+                .filter(predicate)
+                .count();
     }
 }

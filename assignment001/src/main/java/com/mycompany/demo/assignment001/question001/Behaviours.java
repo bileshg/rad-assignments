@@ -10,36 +10,34 @@ package com.mycompany.demo.assignment001.question001;
  * @author bilesh
  */
 public class Behaviours {
-    
+
     public static boolean checkEvenNumber(final int num) {
         return num % 2 == 0;
     }
-    
+
     public static boolean checkOddNumber(final int num) {
         return num % 2 != 0;
     }
-    
+
     public static boolean checkPrimeNumber(final int num) {
-        if(num == 1) return false;
-        
-        boolean check = true;
-        for (int i = 2; i <= num / 2; i++) {
-            if(num % i == 0) {
-                check = false;
-                break;
+        if (num == 0 || num == 1) {
+            return false;
+        }
+
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                return false;
             }
         }
-        return check;
+        return true;
     }
 
     public static boolean checkPalindrome(final String word) {
-        boolean result = true;
         for (int i = 0; i < word.length() / 2; i++) {
             if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
-                result = false;
-                break;
+                return false;
             }
         }
-        return result;
+        return true;
     }
 }
