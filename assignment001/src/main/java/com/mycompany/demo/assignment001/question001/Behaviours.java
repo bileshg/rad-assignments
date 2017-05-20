@@ -11,15 +11,15 @@ package com.mycompany.demo.assignment001.question001;
  */
 public class Behaviours {
 
-    public static boolean checkEvenNumber(final int num) {
+    public static boolean isEvenNumber(final int num) {
         return num % 2 == 0;
     }
 
-    public static boolean checkOddNumber(final int num) {
+    public static boolean isOddNumber(final int num) {
         return num % 2 != 0;
     }
 
-    public static boolean checkPrimeNumber(final int num) {
+    public static boolean isPrimeNumber(final int num) {
         if (num == 0 || num == 1) {
             return false;
         }
@@ -32,7 +32,7 @@ public class Behaviours {
         return true;
     }
 
-    public static boolean checkPalindrome(final String word) {
+    public static boolean isPalindrome(final String word) {
         for (int i = 0; i < word.length() / 2; i++) {
             if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
                 return false;

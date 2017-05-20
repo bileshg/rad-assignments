@@ -5,7 +5,8 @@
  */
 package com.mycompany.demo.assignment001.question001;
 
-import org.junit.Assert;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
@@ -15,51 +16,42 @@ import org.junit.Test;
 public class BehavioursTest {
 
     /**
-     * Test of checkEvenNumber method, of class Behaviours.
+     * Test of isEvenNumber method, of class Behaviours.
      */
     @Test
-    public void testCheckEvenNumber() {
-        System.out.println("checkEvenNumber");
-        int num = 4;
-        boolean expResult = true;
-        boolean result = Behaviours.checkEvenNumber(num);
-        Assert.assertEquals(expResult, result);
+    public void testIsEvenNumber() {
+        assertTrue(Behaviours.isEvenNumber(0));
+        assertTrue(Behaviours.isEvenNumber(4));
+        assertFalse(Behaviours.isEvenNumber(9));
     }
 
     /**
-     * Test of checkOddNumber method, of class Behaviours.
+     * Test of isOddNumber method, of class Behaviours.
      */
     @Test
-    public void testCheckOddNumber() {
-        System.out.println("checkOddNumber");
-        int num = 5;
-        boolean expResult = true;
-        boolean result = Behaviours.checkOddNumber(num);
-        Assert.assertEquals(expResult, result);
+    public void testIsOddNumber() {
+        assertTrue(Behaviours.isOddNumber(7));
+        assertFalse(Behaviours.isOddNumber(12));
     }
 
     /**
-     * Test of checkPrimeNumber method, of class Behaviours.
+     * Test of isPrimeNumber method, of class Behaviours.
      */
     @Test
-    public void testCheckPrimeNumber() {
-        System.out.println("checkPrimeNumber");
-        int num = 11;
-        boolean expResult = true;
-        boolean result = Behaviours.checkPrimeNumber(num);
-        Assert.assertEquals(expResult, result);
+    public void testIsPrimeNumber() {
+        assertFalse(Behaviours.isPrimeNumber(0));
+        assertFalse(Behaviours.isPrimeNumber(1));
+        assertTrue(Behaviours.isPrimeNumber(2));
+        assertTrue(Behaviours.isPrimeNumber(31));
     }
 
     /**
-     * Test of checkPalindrome method, of class Behaviours.
+     * Test of isPalindrome method, of class Behaviours.
      */
     @Test
-    public void testCheckPalindrome() {
-        System.out.println("checkPalindrome");
-        String word = "madam";
-        boolean expResult = true;
-        boolean result = Behaviours.checkPalindrome(word);
-        Assert.assertEquals(expResult, result);
+    public void testIsPalindrome() {
+        assertTrue(Behaviours.isPalindrome("madam"));
+        assertFalse(Behaviours.isPalindrome("palindrome"));
     }
-    
+
 }
