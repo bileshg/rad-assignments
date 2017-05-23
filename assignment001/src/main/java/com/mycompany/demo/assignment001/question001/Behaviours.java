@@ -33,8 +33,11 @@ public class Behaviours {
     }
 
     public static boolean isPalindrome(final String word) {
-        for (int i = 0; i < word.length() / 2; i++) {
-            if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
+        if(word == null) return false;
+        
+        int length = word.length();
+        for (int i = 0; i < length / 2; i++) {
+            if (word.charAt(i) != word.charAt(length - 1 - i)) {
                 return false;
             }
         }
